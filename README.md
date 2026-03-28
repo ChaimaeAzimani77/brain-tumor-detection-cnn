@@ -66,35 +66,9 @@ Ce projet propose un modèle de **Deep Learning** capable de classifier automati
   <img src="Images/2.png" width="750"/>
 </p>
 
-Input (150×150×3)
-      │
-  ┌───▼────────────────────────────┐
-  │  Conv2D(32, 3×3) + ReLU       │  → 896 params
-  │  MaxPooling2D(2×2)             │
-  └────────────────────────────────┘
-      │
-  ┌───▼────────────────────────────┐
-  │  Conv2D(64, 3×3) + ReLU       │  → 18 496 params
-  │  MaxPooling2D(2×2)             │
-  └────────────────────────────────┘
-      │
-  ┌───▼────────────────────────────┐
-  │  Conv2D(128, 3×3) + ReLU      │  → 73 856 params
-  │  MaxPooling2D(2×2)             │
-  └────────────────────────────────┘
-      │
-  Flatten → Dense(128) → Dropout(0.5)
-      │
-  Dense(1, Sigmoid) → [0 = Sain | 1 = Tumeur]
+]
 
-Total : 4 828 481 paramètres (18.42 MB)
 ```
-
-### Résumé du modèle
-
-<p align="center">
-  <img src="images/model_summary.jpg" width="700"/>
-</p>
 
 ## ⚙️ Logique — Data Augmentation
 
@@ -127,12 +101,10 @@ ImageDataGenerator(
 ### Courbes Accuracy & Loss
 
 <p align="center">
-  <img src="images/courbes_accuracy_loss.jpg" width="750"/>
+  <img src="Images/4.png" width="750"/>
 </p>
 
-> 📌 On observe que le modèle converge bien sur l'entraînement mais présente des **oscillations sur la validation**, signe d'un léger overfitting — corrigé dans TP2 avec MobileNet.
-
----
+> 📌 On observe que le modèle converge bien sur l'entraînement mais présente des **oscillations sur la validation**, signe d'un léger overfitting — corrigé ensuite avec MobileNet.
 
 ### 🎯 Évaluation Finale sur données de Test
 
@@ -141,20 +113,16 @@ ImageDataGenerator(
 | **Accuracy** | **95.04%** |
 | **Loss** | **0.1054** |
 
----
-
 ### Matrice de Confusion
 
 <p align="center">
-  <img src="images/confusion_matrix.jpg" width="600"/>
+  <img src="Images/5.png" width="600"/>
 </p>
 
 | | Prédit : No Tumor | Prédit : Tumor |
 |---|---|---|
 | **Réel : No Tumor** | 909 ✅ | 1 ❌ |
 | **Réel : Tumor** | 89 ❌ | 817 ✅ |
-
----
 
 ### Rapport de Classification
 
@@ -168,18 +136,14 @@ ImageDataGenerator(
 | **Tumor** | 1.00 | 0.90 | 0.95 | 906 |
 | **Global** | **0.95** | **0.95** | **0.95** | 1816 |
 
----
-
 ### Prédictions sur images aléatoires
 
 <p align="center">
-  <img src="images/predictions_finales.jpg" width="750"/>
+  <img src="Images/6.png" width="750"/>
 </p>
 
 > ✅ Le titre en **vert** = prédiction correcte | ❌ **rouge** = erreur  
 > Le modèle affiche des probabilités élevées (97–100%) sur la plupart des cas.
-
----
 
 ## 🚀 Améliorations — Voir TP2
 
@@ -189,30 +153,6 @@ ImageDataGenerator(
 | Overfitting possible | Transfer Learning + Fine-tuning |
 | Entraînement long | Poids pré-entraînés ImageNet |
 
-👉 **[TP2 — MobileNet Transfer Learning](https://github.com/VotreNom/brain-tumor-detection-mobilenet)**
-
----
-
-## 📁 Structure du Dépôt
-
-```
-brain-tumor-detection-cnn/
-├── README.md
-├── CNN_Tumeurs.ipynb              ← Notebook Google Colab complet
-├── images/
-│   ├── irm_samples_augmented.jpg  ← Exemples dataset IRM
-│   ├── architecture_cnn_code.jpg  ← Code architecture CNN
-│   ├── model_summary.jpg          ← Résumé des couches
-│   ├── training_logs.jpg          ← Logs entraînement
-│   ├── courbes_accuracy_loss.jpg  ← Courbes training/validation
-│   ├── confusion_matrix.jpg       ← Matrice de confusion
-│   ├── classification_report.jpg  ← Rapport détaillé
-│   └── predictions_finales.jpg    ← Prédictions visuelles
-└── docs/
-    └── tp1_rapport.pdf
-```
-
----
 
 ## 🔑 Concepts Clés Appliqués
 
