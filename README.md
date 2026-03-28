@@ -69,12 +69,11 @@ Ce projet propose un modèle de **Deep Learning** capable de classifier automati
 ]
 
 ```
-
 ## ⚙️ Logique — Data Augmentation
 
 Pour éviter l'overfitting et enrichir le dataset artificiellement :
 
-```python
+python
 ImageDataGenerator(
     rescale        = 1./255,      # Normalisation [0-1]
     rotation_range = 20,          # Rotation aléatoire
@@ -85,7 +84,6 @@ ImageDataGenerator(
     horizontal_flip= True,        # Miroir horizontal
     validation_split = 0.2        # 20% pour validation
 )
-
 ```
 
 ## 🔨 Entraînement
@@ -126,10 +124,6 @@ ImageDataGenerator(
 
 ### Rapport de Classification
 
-<p align="center">
-  <img src="images/classification_report.jpg" width="600"/>
-</p>
-
 | Classe | Precision | Recall | F1-Score | Support |
 |---|---|---|---|---|
 | **No Tumor** | 0.91 | 1.00 | 0.95 | 910 |
@@ -142,12 +136,12 @@ ImageDataGenerator(
   <img src="Images/6.png" width="750"/>
 </p>
 
-> ✅ Le titre en **vert** = prédiction correcte | ❌ **rouge** = erreur  
+> Le titre en **vert** = prédiction correcte | **rouge** = erreur  
 > Le modèle affiche des probabilités élevées (97–100%) sur la plupart des cas.
 
-## 🚀 Améliorations — Voir TP2
+## 🚀 Améliorations — MobileNet
 
-| Limitation TP1 | Solution TP2 |
+| Limitation CNN | Solution MobileNet |
 |---|---|
 | Oscillations validation loss | MobileNet → résultats plus stables |
 | Overfitting possible | Transfer Learning + Fine-tuning |
