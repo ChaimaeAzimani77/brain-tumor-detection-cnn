@@ -1,6 +1,6 @@
 # 🧠 Brain Tumor Detection — CNN Standard
 
-> **TP1 Deep Learning** — ENSA d'Oujda | Filière GSEIR-4 | 2025/2026  
+> **Mini-Projet Deep Learning** — ENSA d'Oujda | Filière GSEIR-4 | 2025/2026  
 > Classification binaire d'images IRM cérébrales par réseau de neurones convolutif
 
 ## 👩‍💻 Réalisé par
@@ -63,7 +63,7 @@ Ce projet propose un modèle de **Deep Learning** capable de classifier automati
 ## ⚙️ Architecture du CNN
 
 <p align="center">
-  <img src="Images/2.png" width="750"/>
+  <img src="Images/2.png" width="850"/>
 </p>
 
 ]
