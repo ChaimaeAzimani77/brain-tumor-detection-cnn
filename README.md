@@ -33,7 +33,7 @@ Ce projet propose un modèle de **Deep Learning** capable de classifier automati
 ### Exemples d'images IRM (avec Data Augmentation)
 
 <p align="center">
-  <img src="Images/1.png" width="750"/>
+  <img src="Images/1.png" width="850"/>
 </p>
 
 ## 🛠️ Partie Matérielle — Paramètres du Modèle
@@ -63,10 +63,8 @@ Ce projet propose un modèle de **Deep Learning** capable de classifier automati
 ## ⚙️ Architecture du CNN
 
 <p align="center">
-  <img src="Images/2.png" width="850"/>
+  <img src="Images/2.png" width="900"/>
 </p>
-
-]
 
 ```
 ## ⚙️ Logique — Data Augmentation
@@ -133,7 +131,7 @@ ImageDataGenerator(
 ### Prédictions sur images aléatoires
 
 <p align="center">
-  <img src="Images/6.png" width="750"/>
+  <img src="Images/6.png" width="850"/>
 </p>
 
 > Le titre en **vert** = prédiction correcte | **rouge** = erreur  
